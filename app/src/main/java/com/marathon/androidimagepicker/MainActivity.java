@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     final int CAMERA_PERMISSION = 200;
     final int STORAGE_PERMISSION = 201;
-    Button uploadBtn;
+    Button uploadBtn, playMedia;
     ListView listView;
     List<Uri> list = new ArrayList<>();
     @Override
@@ -53,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
 
         uploadBtn.setOnClickListener(v -> {
             selectImage();
+        });
+
+        playMedia = findViewById(R.id.playMedia);
+        playMedia.setOnClickListener(v -> {
+            Intent i = new Intent(this, VideoPlayer.class);
+            startActivity(i);
         });
     }
 
@@ -112,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
                 String filepath = cursor.getString(index);
                 cursor.close();
                 Log.d("Image Path", "onActivityResult: " + filepath);
-
 
                 CustomListViewAdapter customListViewAdapter = new CustomListViewAdapter(this, list);
                 listView.setAdapter(customListViewAdapter);

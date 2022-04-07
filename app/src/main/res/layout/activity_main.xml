@@ -26,7 +26,15 @@
         android:id="@+id/imageListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        />
+        android:layout_margin="20dp" />
 
+    <Button
+        android:id="@+id/playMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Video"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
 </LinearLayout>
