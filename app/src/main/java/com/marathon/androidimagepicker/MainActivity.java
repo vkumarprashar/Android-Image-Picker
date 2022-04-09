@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         playMedia = findViewById(R.id.playMedia);
         playMedia.setOnClickListener(v -> {
-            Intent i = new Intent(this, VideoPlayer.class);
+            Intent i = new Intent(MainActivity.this, VideoPlayer.class);
             startActivity(i);
         });
     }
